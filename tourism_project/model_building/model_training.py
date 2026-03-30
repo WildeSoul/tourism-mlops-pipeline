@@ -226,7 +226,7 @@ def main():
             print(f"   F1 Score:  {f1:.4f}")
             print(f"   AUC-ROC:   {auc_roc:.4f}")
             print(f"\n   Classification Report:")
-            print(classification_report(y_test, y_pred, indent=6))
+            print(classification_report(y_test, y_pred))
 
             # Track best model
             if f1 > best_score:
