@@ -25,9 +25,9 @@ if HF_TOKEN:
         user_info = hf_api.whoami(token=HF_TOKEN)
         HF_USERNAME = user_info["name"]
     except Exception:
-        HF_USERNAME = os.environ.get("HF_USERNAME", "YOUR_HF_USERNAME")
+        HF_USERNAME = os.environ.get("HF_USERNAME", "WILDESOUL")
 else:
-    HF_USERNAME = os.environ.get("HF_USERNAME", "YOUR_HF_USERNAME")
+    HF_USERNAME = os.environ.get("HF_USERNAME", "WILDESOUL")
 
 MODEL_REPO = f"{HF_USERNAME}/tourism-model"
 
