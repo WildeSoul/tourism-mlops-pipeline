@@ -235,7 +235,7 @@ if page == "🔮 Single Prediction":
             marital_status = st.selectbox("Marital Status", ["Single", "Married", "Divorced", "Unmarried"])
             occupation = st.selectbox("Occupation", ["Salaried", "Small Business", "Large Business", "Free Lancer"])
             designation = st.selectbox("Designation", ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
-            monthly_income = st.number_input("Monthly Income (₹)", min_value=1000, max_value=100000, value=20000)
+            monthly_income = st.number_input("Monthly Income (₹)", min_value=1000, max_value=1000000, value=20000)
 
         with col2:
             st.markdown("**✈️ Travel Preferences**")
