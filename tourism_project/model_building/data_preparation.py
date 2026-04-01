@@ -74,7 +74,7 @@ def generate_eda_visualizations(df, output_dir):
     axes = axes.flatten() if n_rows > 1 else [axes] if n_rows == 1 and n_cols == 1 else axes.flatten()
     for i, col in enumerate(num_cols):
         sns.histplot(data=df, x=col, hue='ProdTaken', kde=True, ax=axes[i],
-                     palette={0: '#e74c3c', 1: '#2ecc71'}, alpha=0.6)
+                     palette=['#e74c3c', '#2ecc71'], alpha=0.6)
         axes[i].set_title(f'{col}', fontsize=11, fontweight='bold')
         axes[i].legend(title='ProdTaken', labels=['No', 'Yes'], fontsize=8)
     for j in range(i+1, len(axes)):
@@ -94,8 +94,8 @@ def generate_eda_visualizations(df, output_dir):
     if len(outlier_cols) == 1:
         axes = [axes]
     for i, col in enumerate(outlier_cols):
-        sns.boxplot(data=df, y=col, x='ProdTaken', ax=axes[i],
-                    palette={0: '#e74c3c', 1: '#2ecc71'})
+        sns.boxplot(data=df, y=col, x='ProdTaken', hue='ProdTaken', ax=axes[i],
+                    palette=['#e74c3c', '#2ecc71'], legend=False)
         axes[i].set_title(f'{col}', fontsize=12, fontweight='bold')
         axes[i].set_xticklabels(['Not Purchased', 'Purchased'])
     fig.suptitle('Outlier Analysis — Key Numerical Features', fontsize=14, fontweight='bold')
