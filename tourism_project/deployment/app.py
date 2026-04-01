@@ -542,32 +542,32 @@ elif page == "📊 Model Analytics":
     with viz_tab1:
         path = load_plot("model_comparison_chart.png")
         if path:
-            st.image(path, caption="Model Comparison — F1 Score, AUC-ROC, Accuracy", use_container_width=True)
+            st.image(path, caption="Model Comparison — F1 Score, AUC-ROC, Accuracy", use_column_width=True)
         else:
             st.info("Model comparison chart not available")
 
     with viz_tab2:
         path = load_plot("confusion_matrix.png")
         if path:
-            st.image(path, caption="Confusion Matrix — Best Model", use_container_width=True)
+            st.image(path, caption="Confusion Matrix — Best Model", use_column_width=True)
         else:
             st.info("Confusion matrix plot not available")
 
     with viz_tab3:
         path = load_plot("roc_curves_comparison.png")
         if path:
-            st.image(path, caption="ROC Curves — All Models Comparison", use_container_width=True)
+            st.image(path, caption="ROC Curves — All Models Comparison", use_column_width=True)
         else:
             path2 = load_plot("roc_curve.png")
             if path2:
-                st.image(path2, caption="ROC Curve — Best Model", use_container_width=True)
+                st.image(path2, caption="ROC Curve — Best Model", use_column_width=True)
             else:
                 st.info("ROC curve plot not available")
 
     with viz_tab4:
         path = load_plot("shap_summary_plot.png")
         if path:
-            st.image(path, caption="SHAP Feature Impact Summary (Beeswarm)", use_container_width=True)
+            st.image(path, caption="SHAP Feature Impact Summary (Beeswarm)", use_column_width=True)
             st.markdown("""
             **How to read this plot:**
             - Each dot represents a single prediction
@@ -581,7 +581,7 @@ elif page == "📊 Model Analytics":
     with viz_tab5:
         path = load_plot("shap_feature_importance.png")
         if path:
-            st.image(path, caption="SHAP Feature Importance (Mean |SHAP| Value)", use_container_width=True)
+            st.image(path, caption="SHAP Feature Importance (Mean |SHAP| Value)", use_column_width=True)
         else:
             st.info("SHAP feature importance plot not available")
 
