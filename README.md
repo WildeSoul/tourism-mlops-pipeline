@@ -74,3 +74,4 @@ register-dataset → data-prep → data-validation → model-training → model-
 - **Streamlit App**: https://huggingface.co/spaces/WILDESOUL/wellness-tourism-app
 - **Dataset**: https://huggingface.co/datasets/WILDESOUL/tourism-dataset
 - **Model**: https://huggingface.co/WILDESOUL/tourism-model
+  
